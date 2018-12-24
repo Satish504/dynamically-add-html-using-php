@@ -2,12 +2,6 @@
 <?php
 
 $cser=mysqli_connect("localhost","root","*****","*****");
-
-
-
-
-
-
 $query = mysqli_query($cser,"SELECT* FROM example");
 			 $number=mysqli_num_rows($query);
 			$l=0;
@@ -28,40 +22,28 @@ $query = mysqli_query($cser,"SELECT* FROM example");
 				echo'<script>alert("no data found");</script>';
 			}
 			 
-
 ?>
 <html>
 <head>
 <title>data</title>
 </head>
-
 <body>
-
 <h2> data</h2>
-
 <table  border="1">
   <tr>
     <th>name</th>
     <th>college name</th>
     <th>pin number</th>
 	<th>phone</th>
-	<th>event</th>
-    
-
-	
+	  <th>event</th>	
   </tr>
   <?php 
- 
-				for($i=0;$i<$number;$i++)	
-				{					
+ for($i=0;$i<$number;$i++)	
+{					
   echo'<tr><td>'.$name[$i].'</td>
   <td>'.$clg[$i].'</td>
   <td>'.$roll[$i].'</td>
   <td>'.$phone[$i].'</td>
   <td>'.$event[$i].'</td></tr>';
- 
-			}
-  ?>
-  
-  
-			 
+ }
+  ?>			 
